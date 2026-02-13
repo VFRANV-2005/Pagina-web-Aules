@@ -2,19 +2,16 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Aules - Solo Imágenes</title>
+    <title>Aules</title>
     <style>
-        /* 1. RESET Y BASE */
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background: #fff; padding-bottom: 80px; }
+        body { background: #fff; padding-bottom: 80px; font-family: 'Segoe UI', Arial, sans-serif; min-width: 1200px; }
 
-        /* 2. HERO (LOGO Y TEXTO) */
         .hero {
             display: grid;
             place-items: center;
             padding: 40px 20px;
             text-align: center;
-            font-family: 'Segoe UI', Arial, sans-serif;
         }
         .hero-main {
             display: grid;
@@ -26,7 +23,6 @@
         .hero-main span { font-size: 80px; color: #6d6d6d; font-weight: 300; }
         .hero p { font-size: 18px; margin-top: 10px; color: #333; margin-bottom: 20px; }
 
-        /* 3. REJILLA DE TARJETAS (4 columnas según captura) */
         .etapas {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -36,7 +32,6 @@
             margin: 0 auto;
         }
 
-        /* ESTILO PARA LAS TARJETAS (SOLO IMAGEN) */
         .card {
             height: 145px;
             border-radius: 12px;
@@ -44,12 +39,16 @@
             background-position: center;
             background-color: #f0f0f0; 
             display: block;
+            cursor: pointer;
+            transition: filter 0.3s ease;
         }
 
-        /* ANCHOS ESPECIALES (Mantenidos de la captura original) */
+        .card:hover {
+            filter: brightness(0.75);
+        }
+
         .ancho-doble { grid-column: span 2; } 
 
-        /* CONTENEDOR DE IMÁGENES: Sustituye las URLs aquí */
         .img-1 { background-image: url('Captura de pantalla 2026-02-13 195005.png'); }
         .img-2 { background-image: url('Captura de pantalla 2026-02-13 195022.png'); }
         .img-3 { background-image: url('Captura de pantalla 2026-02-13 195036.png'); }
@@ -64,7 +63,6 @@
         .img-12 { background-image: url('Captura de pantalla 2026-02-13 195232.png'); }
         .img-13 { background-image: url('Captura de pantalla 2026-02-13 195243.png'); }
 
-        /* 4. SECCIÓN DEL BANNER ITEDU */
         .footer-banner {
             display: grid;
             justify-content: center;
